@@ -1,0 +1,17 @@
+
+
+Algoritmo sin_titulo
+	Definir N, i, sum Como Entero
+	Escribir "Ingrese un numero entero"
+	Leer N
+	
+	i = 1
+	sum = 0
+	
+	hacer
+		sum = sum + 2*i
+		i = i + 1
+	Mientras Que i <= N
+	
+	Escribir "La suma de los ",N " primeros numero entertos es: ", sum
+FinAlgoritmo

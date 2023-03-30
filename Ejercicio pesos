@@ -1,0 +1,9 @@
+Algoritmo Ej_2
+	Definir pe,do,eu Como Real
+	Escribir "Ingrese una cantidad de pesos para realizar el cambio a dolares y euros"
+	Leer pe
+	do = (pe*1)/350
+	eu = (pe*1)/200
+	Escribir ,pe," pesos esquivalen a " ,do " dolares"
+	Escribir ,pe " pesos equivalen a " , eu " euros"
+FinAlgoritmo

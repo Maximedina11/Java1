@@ -1,0 +1,33 @@
+//Realizar un programa que pida al usuario el horario en el que se conectó al zoom. Si ese horario
+//está entre la hora de ingreso y la hora de ingreso + los 15? de tardanza, mostrará un mensaje por
+//pantalla que diga "Llegaste a tiempo, tienes presente". Si el horario de ingreso supera ese límite,
+//se mostrará un mensaje por pantalla que diga "Hoy tendrás tardanza. Recuerda avisarle a tus
+//coaches cuando llegarás tarde. Mañana te esperamos a tiempo, tu participación en el equipo es
+//VITAL"
+
+Algoritmo llegada_tarde
+	
+	definir hh, mm, hing, ming, limite Como Entero
+	
+	hing = 19
+	
+	ming = 00
+	
+	escribir 'Ingrese la hora de su llegada a clase (en formato 24 hs)'
+	leer hh
+	escribir 'Ingrese los minutos de su llegada a clase'
+	leer mm
+	
+	limite = ming + 15
+	
+	Si hh == hing y mm <= ming + limite
+		entonces escribir 'Ha llegado a tiempo'
+	SiNo
+		si hh < 19 Entonces
+			escribir 'Ha llegado temprano'
+		sino
+		escribir 'Ha llegado tarde, avise al couch y los compañeros"
+		FinSi
+	FinSi
+	
+FinAlgoritmo

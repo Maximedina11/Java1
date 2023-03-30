@@ -1,0 +1,30 @@
+// La empresa "Te llevo a todos lados" está destinada al alquiler de autos y tiene un sistema
+// de tarifa que consiste en cobrar el alquiler por hora. Si el cliente devuelve el auto dentro
+// de las 2 horas de uso el valor que corresponde pagar es de $400 pesos y la nafta va de
+// regalo. Cuando el cliente regresa a la empresa pasadas las 2 horas, se ingresan la
+// cantidad de litros de nafta gastados y el tiempo transcurrido en horas. Luego, se le cobra
+// 40 pesos por litro de nafta gastado, y la hora se fracciona en minutos, cobrando un total
+// de $5,20 el minuto de uso. Realice un programa que permita registrar esa información y el
+// total a pagar por el cliente
+
+Algoritmo ejercicio4op
+	Definir hs, nafta, extra, total Como Real
+	Definir tax Como Entero
+	tax = 400
+	Escribir 'Ingrese la cantidad de horas que ha utilizado el auto:'
+	Leer hs
+	Si hs>=0 Y hs<=2 Entonces
+		Escribir 'Como ha usado el auto menos de 2 hs su tarifa a abonar es: $',tax, ' ,la nafta va de regalo.'
+	SiNo
+		Si hs<0 Entonces
+			Escribir 'Las horas no pueden ser negativas'
+		FinSi
+		si hs>2
+			escribir 'Ingresar los litros de nafta consumidos: '
+			leer nafta
+			extra = hs*60
+			total = (extra*5.20)+(nafta*40)
+			escribir 'Pasadas las 2 hs se cobra $40 por litro de nafta y $5.2 por minuto de uso, usted debe abonar en total $', total
+		FinSi
+	FinSi
+FinAlgoritmo

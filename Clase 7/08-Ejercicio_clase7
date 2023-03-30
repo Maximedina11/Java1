@@ -1,0 +1,21 @@
+//Escribir un programa que calcule cuántos dígitos tiene un número entero positivo sin
+//convertirlo a cadena (pista: se puede hacer dividiendo varias veces entre 10). Nota:
+//		investigar la función trunc().
+
+Algoritmo sin_titulo
+	
+	definir contador Como Entero
+	definir num Como Real
+	
+	escribir "Introduzca un numero entero"
+	leer num
+	
+	contador = 0
+	
+	mientras trunc(num) <> 0 Hacer
+		contador = contador+ 1
+		num = num/10
+	FinMientras
+	
+	escribir "La cantidad de digitos que contiene el numero es de ", contador
+FinAlgoritmo

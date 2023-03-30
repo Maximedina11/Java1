@@ -1,0 +1,35 @@
+//Hacer un algoritmo para calcular la media de los números pares e impares, sólo se
+//ingresará diez números.
+Algoritmo sin_titulo
+	Definir num,cont,contpa,contimpa,sumpa,sumimpa Como Entero
+	Definir prompa, promimpa Como Real
+	cont=0
+	sumpa=0
+	sumimpa=0
+	contpa=0
+	contimpa=0
+	Hacer
+		Escribir "Ingrese un número entero"
+		Leer num
+		Si num Mod 2 = 0 Entonces
+			sumpa=sumpa+num
+			contpa =contpa +1
+		SINO
+			sumimpa= sumimpa+num
+			contimpa= contimpa+1
+		FinSi
+		cont=cont+1
+	Mientras Que cont<>10
+	Si contpa=0 Entonces
+		Prompa=0
+	Sino
+		Prompa= sumpa/contpa
+	FinSi
+	si contimpa =0 Entonces
+		Promimpa=0
+	Sino
+		promimpa=sumimpa/contimpa
+	FinSi
+	Escribir "El promedio de los pares es: ", prompa
+	Escribir "El promedio de los impares es: ", promimpa
+FinAlgoritmo

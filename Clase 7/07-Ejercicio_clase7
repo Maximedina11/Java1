@@ -1,0 +1,49 @@
+//Calcular las calificaciones de un grupo de alumnos. La nota final de cada alumno se
+//calcula según el siguiente criterio: la parte práctica vale el 10%; la parte de problemas vale
+//	el 50% y la parte teórica el 40%. El programa leerá el nombre del alumno, las tres notas
+//	obtenidas, mostrará el resultado por pantalla, y a continuación volverá a pedir los datos del
+//	siguiente alumno hasta que el nombre sea una cadena vacía. Las notas deben estar
+//	comprendidas entre 0 y 10, y si no están dentro de ese rango no se imprimirá el promedio
+//		y se mostrará un mensaje de error.
+Algoritmo sin_titulo
+	
+	definir notaPractica, notaProblema, notaTeorica, promedio Como Real
+	definir longNombre Como Entero
+	definir nombreAlumno Como Caracter
+	
+	escribir "Introduzca el nombre del alumno"
+	leer nombreAlumno
+	
+	mientras Longitud(nombreAlumno) <> 0 Hacer
+	
+		escribir "Introduzca la nota practica. La misma vale el 10% para la nota final"
+		leer notaPractica
+		
+		escribir "Introduzca la nota del problea. La misma vale el 50% para la nota final"
+		leer notaProblema
+		
+		escribir "Introduzca la nota practica. LA misma vale el 40% de la nota final"
+		leer notaTeorica
+		
+		promedio = (notaPractica*0.10) + (notaProblema*0.50) + (notaTeorica* 0.40)
+		
+		Escribir nombreAlumno
+		si notaPractica > 0 y notaPractica < 10 y notaProblema > 0 y notaProblema < 10 y notaTeorica > 0 y notaTeorica < 10 Entonces
+			escribir "Su nota practica es ", notaPractica
+			escribir "Su nota del problema es ", notaProblema
+			escribir "Su nota teorica es ", notaTeorica
+			escribir "Su nota final es ", promedio
+		SiNo
+			escribir "Una de las notas no esta comprendida entre 0 y 10"
+		FinSi
+			
+		
+		escribir "Introduzca el nombre del alumno"
+		leer nombreAlumno
+	FinMientras
+	
+	
+	
+	
+	
+FinAlgoritmo
